@@ -10,7 +10,16 @@ namespace ConsoleApplication
 		private double ioc = 0.0667;
 
 		// Frequency data for English language
-		Dictionary<string, double> english = new Dictionary<string, double>();
+		Dictionary<string, double> english = new Dictionary<string, double>()
+		{
+			{"A", 8.167}, {"B", 1.492},	{"C", 2.782}, {"D", 4.253},
+			{"E", 12.702}, {"F", 2.228}, {"G", 2.015}, {"H", 6.094},
+			{"I", 6.996}, {"J", 0.153},	{"K", 0.772}, {"L", 4.025},
+			{"M", 2.406}, {"N", 6.749}, {"O", 7.507}, {"P", 1.929},
+			{"Q", 0.095}, {"R", 5.987},	{"S", 6.327}, {"T", 9.056},
+			{"U", 2.758}, {"V", 0.978}, {"W", 2.360}, {"X", 0.150},
+			{"Y", 1.974}, {"Z", 0.074},	{"maxValue", 12.702}, {"ioc", 0.0667}
+		};
 
 		// Enciphers text using 'key' parameter
 		public string Encipher(string text, string key)
@@ -99,12 +108,12 @@ namespace ConsoleApplication
 				{
 					if (char.IsLower(letter))
 					{
-						char cipher = (char) (Modulo(letter - 'a' + key, 26) + 'a');
+						char cipher = (char)(Modulo(letter - 'a' + key, 26) + 'a');
 						cipherText.Add(cipher);
 					}
 					else if (char.IsUpper(letter))
 					{
-						char cipher = (char) (Modulo(letter - 'A' + key, 26) + 'A');
+						char cipher = (char)(Modulo(letter - 'A' + key, 26) + 'A');
 						cipherText.Add(cipher);
 					}
 				}
@@ -139,6 +148,24 @@ namespace ConsoleApplication
 			return frequency;
 		}
 
+		// Change dictionary to compare with frequency data
+		//Dictionary<string, double> updateDictionary(Dictionary<string, double> dictionary)
+		//{
+		//	int[] values = new int[dictionary.Count];
+		//	dictionary.Values.CopyTo(values, 0);
+		//	int maxValue = values[values.Length];
+		//	double ratio = english["maxValue"] / maxValue;
+
+		//	Dictionary<string, double> newDictionary = new Dictionary<string,double>();
+
+		//	foreach (KeyValuePair<char, int> item in dictionary)
+		//	{
+		//		newDictionary[item.Key.ToString()] = ((double)item.Value) * ratio;
+		//	}
+
+		//	return dictionary;
+		//}
+
 		// Find Caesar shift
 		private int FindOptimalCaesarShift(string text)
 		{
@@ -147,9 +174,12 @@ namespace ConsoleApplication
 
 			for (int shift = 0; shift < 26; shift++)
 			{
+				// TODO
 				string encipheredText = CaesarEncipher(text, shift);
+				Dictionary<string, double> letterFrequencies = english;
 				Dictionary<char, int> frequencies = CountLetterFrequency(encipheredText);
 			}
+
 
 			return 0;
 		}
