@@ -18,9 +18,9 @@ namespace ConsoleApplication
 
 			Console.WriteLine(myVigenere.CaesarEncipher("ABCabc", 1));
 
-			foreach (var mem in myVigenere.CountLetterFrequency("TEST"))
+			foreach (var mem in myVigenere.UpdateDictionary(myVigenere.CountLetterFrequency("Lorem ipsum dolor sit amet.")))
 			{
-				Console.WriteLine("{0} is memberid: {1}", mem.Value, mem.Key);
+				Console.WriteLine("Letter {0} is {1} %", mem.Key, mem.Value);
 			}
 		}
 	}

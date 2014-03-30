@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ConsoleApplication
 {
@@ -126,13 +127,13 @@ namespace ConsoleApplication
 			return String.Join("", cipherText);
 		}
 
-		public Dictionary<char, int> CountLetterFrequency(string text)
+		public Dictionary<string, double> CountLetterFrequency(string text)
 		{
-			Dictionary<char, int> frequency = new Dictionary<char, int>();
+			Dictionary<string, double> frequency = new Dictionary<string, double>();
 
 			for (char c = 'A'; c <= 'Z'; c++)
 			{
-				frequency.Add(c, 0);
+				frequency.Add(c.ToString(), 0);
 			}
 
 			text = text.ToUpper();
@@ -141,7 +142,7 @@ namespace ConsoleApplication
 			{
 				if (char.IsLetter(letter))
 				{
-					frequency[letter]++;
+					frequency[letter.ToString()]++;
 				}
 			}
 
@@ -149,35 +150,52 @@ namespace ConsoleApplication
 		}
 
 		// Change dictionary to compare with frequency data
-		//Dictionary<string, double> updateDictionary(Dictionary<string, double> dictionary)
-		//{
-		//	int[] values = new int[dictionary.Count];
-		//	dictionary.Values.CopyTo(values, 0);
-		//	int maxValue = values[values.Length];
-		//	double ratio = english["maxValue"] / maxValue;
+		public Dictionary<string, double> UpdateDictionary(Dictionary<string, double> dictionary)
+		{
+			double[] values = new double[dictionary.Count];
+			values = dictionary.Values.ToArray();
+			Array.Sort(values);
+			double maxValue = values[values.Length - 1];
+			double ratio = english["maxValue"] / maxValue;
 
-		//	Dictionary<string, double> newDictionary = new Dictionary<string,double>();
+			Dictionary<string, double> newDictionary = new Dictionary<string, double>();
 
-		//	foreach (KeyValuePair<char, int> item in dictionary)
-		//	{
-		//		newDictionary[item.Key.ToString()] = ((double)item.Value) * ratio;
-		//	}
+			foreach (KeyValuePair<string, double> item in dictionary)
+			{
+				newDictionary[item.Key] = item.Value * ratio;
+			}
 
-		//	return dictionary;
-		//}
+			return newDictionary;
+		}
+
+		// Difference between letter's frequency in the text and data, squared to prevent negative values
+		double SquaredDifference(Dictionary<string, double> dictionary)
+		{
+			double sum = 0;
+
+			foreach (var item in dictionary)
+			{
+				sum += Math.Pow(item.Value - english[item.Key], 2);
+			}
+
+			return sum;
+		}
 
 		// Find Caesar shift
 		private int FindOptimalCaesarShift(string text)
 		{
-			int optimal = 0;
-			int smallestSum = -1;
+			double optimal = 0;
+			double smallestSum = -1;
 
 			for (int shift = 0; shift < 26; shift++)
 			{
 				// TODO
 				string encipheredText = CaesarEncipher(text, shift);
 				Dictionary<string, double> letterFrequencies = english;
-				Dictionary<char, int> frequencies = CountLetterFrequency(encipheredText);
+				Dictionary<string, double> frequencies = CountLetterFrequency(encipheredText);
+				Dictionary<string, double> updatedDictionary = UpdateDictionary(frequencies);
+				double sum = SquaredDifference(updatedDictionary);
+
 			}
 
 
