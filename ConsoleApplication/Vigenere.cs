@@ -184,7 +184,7 @@ namespace ConsoleApplication
 		// Find Caesar shift
 		private int FindOptimalCaesarShift(string text)
 		{
-			double optimal = 0;
+			int optimal = 0;
 			double smallestSum = -1;
 
 			for (int shift = 0; shift < 26; shift++)
@@ -196,10 +196,19 @@ namespace ConsoleApplication
 				Dictionary<string, double> updatedDictionary = UpdateDictionary(frequencies);
 				double sum = SquaredDifference(updatedDictionary);
 
+				if (smallestSum == -1)
+				{
+					smallestSum = sum;
+				}
+
+				if (sum < smallestSum)
+				{
+					optimal = shift;
+					smallestSum = sum;
+				}
 			}
 
-
-			return 0;
+			return optimal;
 		}
 
 		private string GetEveryNthChar(string text, int start, int n)
@@ -295,9 +304,21 @@ namespace ConsoleApplication
 			{
 				string temp = GetEveryNthChar(lettersOnly, i, keyLength);
 				// Best Caesar shift
+				int shift = FindOptimalCaesarShift(temp);
+
+				if (shift == 0)
+				{
+					key.Add("A");
+				}
+				else
+				{
+					char letter = (char)('A' + 26 - shift);
+					key.Add(letter.ToString());
+				}
 			}
 
-			return "";
+			string result = String.Join("", key);
+			return result;
 		}
 
 		public string CrackKey(string text, int minLength = 5, int maxLength = 15)
