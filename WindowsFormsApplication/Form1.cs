@@ -25,7 +25,17 @@ namespace WindowsFormsApplication
 
 			try
 			{
-				key = Vigenere.CrackKey(text, Convert.ToInt32(minUpDown.Value), Convert.ToInt32(maxUpDown.Value));
+				if (kasiskiBox.Checked) {
+					int kMin = Kasiski.FindKeyLength(cipherTextBox.Text)[0];
+					int kMax = Kasiski.FindKeyLength(cipherTextBox.Text)[1];
+
+					minUpDown.Value = kMin;
+					maxUpDown.Value = kMax;
+
+					key = Vigenere.CrackKey(text, kMin, kMax);
+				} else {
+					key = Vigenere.CrackKey(text, Convert.ToInt32(minUpDown.Value), Convert.ToInt32(maxUpDown.Value));
+				}
 				keyTextBox.Text = key;
 				resultTextBox.Text = Vigenere.Decipher(text, key);
 			}
@@ -37,7 +47,7 @@ namespace WindowsFormsApplication
 
 		private void minUpDown_ValueChanged(object sender, EventArgs e)
 		{
-			if (minUpDown.Value >= maxUpDown.Value)
+			if (minUpDown.Value > maxUpDown.Value)
 			{
 				MessageBox.Show("Error");
 				minUpDown.Value = maxUpDown.Value - 1;
@@ -46,11 +56,17 @@ namespace WindowsFormsApplication
 
 		private void maxUpDown_ValueChanged(object sender, EventArgs e)
 		{
-			if (maxUpDown.Value <= minUpDown.Value)
+			if (maxUpDown.Value < minUpDown.Value)
 			{
 				MessageBox.Show("Error");
 				maxUpDown.Value = minUpDown.Value + 1;
 			}
+		}
+
+		private void kasiskiBox_CheckedChanged(object sender, EventArgs e)
+		{
+			minUpDown.Enabled = !minUpDown.Enabled;
+			maxUpDown.Enabled = !maxUpDown.Enabled;
 		}
 	}
 }

@@ -31,8 +31,6 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.cipherTextBox = new System.Windows.Forms.RichTextBox();
 			this.analyzeButton = new System.Windows.Forms.Button();
-			this.radioButton1 = new System.Windows.Forms.RadioButton();
-			this.radioButton2 = new System.Windows.Forms.RadioButton();
 			this.resultTextBox = new System.Windows.Forms.RichTextBox();
 			this.cipherLabel = new System.Windows.Forms.Label();
 			this.methodLabel = new System.Windows.Forms.Label();
@@ -41,7 +39,7 @@
 			this.keyLengthLabel = new System.Windows.Forms.Label();
 			this.minUpDown = new System.Windows.Forms.NumericUpDown();
 			this.maxUpDown = new System.Windows.Forms.NumericUpDown();
-			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.menuStrip = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,9 +69,10 @@
 			this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.kasiskiBox = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.minUpDown)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.maxUpDown)).BeginInit();
-			this.menuStrip1.SuspendLayout();
+			this.menuStrip.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// cipherTextBox
@@ -87,20 +86,6 @@
 			this.analyzeButton.Name = "analyzeButton";
 			this.analyzeButton.UseVisualStyleBackColor = true;
 			this.analyzeButton.Click += new System.EventHandler(this.analyzeButton_Click);
-			// 
-			// radioButton1
-			// 
-			resources.ApplyResources(this.radioButton1, "radioButton1");
-			this.radioButton1.Name = "radioButton1";
-			this.radioButton1.TabStop = true;
-			this.radioButton1.UseVisualStyleBackColor = true;
-			// 
-			// radioButton2
-			// 
-			resources.ApplyResources(this.radioButton2, "radioButton2");
-			this.radioButton2.Name = "radioButton2";
-			this.radioButton2.TabStop = true;
-			this.radioButton2.UseVisualStyleBackColor = true;
 			// 
 			// resultTextBox
 			// 
@@ -154,16 +139,16 @@
             0});
 			this.maxUpDown.ValueChanged += new System.EventHandler(this.maxUpDown_ValueChanged);
 			// 
-			// menuStrip1
+			// menuStrip
 			// 
-			this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
-			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.menuStrip.BackColor = System.Drawing.SystemColors.Control;
+			this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
             this.toolsToolStripMenuItem,
             this.helpToolStripMenuItem});
-			resources.ApplyResources(this.menuStrip1, "menuStrip1");
-			this.menuStrip1.Name = "menuStrip1";
+			resources.ApplyResources(this.menuStrip, "menuStrip");
+			this.menuStrip.Name = "menuStrip";
 			// 
 			// fileToolStripMenuItem
 			// 
@@ -339,10 +324,18 @@
 			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
 			resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
 			// 
+			// kasiskiBox
+			// 
+			resources.ApplyResources(this.kasiskiBox, "kasiskiBox");
+			this.kasiskiBox.Name = "kasiskiBox";
+			this.kasiskiBox.UseVisualStyleBackColor = true;
+			this.kasiskiBox.CheckedChanged += new System.EventHandler(this.kasiskiBox_CheckedChanged);
+			// 
 			// Form1
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.kasiskiBox);
 			this.Controls.Add(this.maxUpDown);
 			this.Controls.Add(this.minUpDown);
 			this.Controls.Add(this.keyLengthLabel);
@@ -351,18 +344,16 @@
 			this.Controls.Add(this.methodLabel);
 			this.Controls.Add(this.cipherLabel);
 			this.Controls.Add(this.resultTextBox);
-			this.Controls.Add(this.radioButton2);
-			this.Controls.Add(this.radioButton1);
 			this.Controls.Add(this.analyzeButton);
 			this.Controls.Add(this.cipherTextBox);
-			this.Controls.Add(this.menuStrip1);
-			this.MainMenuStrip = this.menuStrip1;
+			this.Controls.Add(this.menuStrip);
+			this.MainMenuStrip = this.menuStrip;
 			this.MaximizeBox = false;
 			this.Name = "Form1";
 			((System.ComponentModel.ISupportInitialize)(this.minUpDown)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.maxUpDown)).EndInit();
-			this.menuStrip1.ResumeLayout(false);
-			this.menuStrip1.PerformLayout();
+			this.menuStrip.ResumeLayout(false);
+			this.menuStrip.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -372,8 +363,6 @@
 
 		private System.Windows.Forms.RichTextBox cipherTextBox;
 		private System.Windows.Forms.Button analyzeButton;
-		private System.Windows.Forms.RadioButton radioButton1;
-		private System.Windows.Forms.RadioButton radioButton2;
 		private System.Windows.Forms.RichTextBox resultTextBox;
 		private System.Windows.Forms.Label cipherLabel;
 		private System.Windows.Forms.Label methodLabel;
@@ -382,7 +371,7 @@
 		private System.Windows.Forms.Label keyLengthLabel;
 		private System.Windows.Forms.NumericUpDown minUpDown;
 		private System.Windows.Forms.NumericUpDown maxUpDown;
-		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.MenuStrip menuStrip;
 		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
@@ -412,6 +401,7 @@
 		private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
 		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+		private System.Windows.Forms.CheckBox kasiskiBox;
 	}
 }
 

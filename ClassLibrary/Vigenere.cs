@@ -346,7 +346,7 @@ namespace ClassLibrary
 		/// <param name="minLength">Минимальная длина ключа</param>
 		/// <param name="maxLength">Максимальная длина ключа</param>
 		/// <returns>Ключ</returns>
-		public static string FindKey(string text, int minLength = 5, int maxLength = 15)
+		public static string FindKey(string text, int minLength, int maxLength)
 		{
 			// Текст, содержащий только буквы
 			List<char> accumulator = new List<char>();
@@ -399,9 +399,9 @@ namespace ClassLibrary
 				throw new System.ArgumentException("Минимальная длина ключа должна быть больше нуля");
 			if (maxLength < 1)
 				throw new System.ArgumentException("Максимальная длина ключа должна быть больше нуля");
-			if (minLength >= maxLength)
+			if (minLength > maxLength)
 				throw new System.ArgumentException("Минимальная длина ключа должна быть меньше максимальной");
-			if (maxLength <= minLength)
+			if (maxLength < minLength)
 				throw new System.ArgumentException("Максимальная длина ключа должна быть больше минимальной");
 			if (text.Length == 0)
 				throw new System.ArgumentException("Пустой текст");
