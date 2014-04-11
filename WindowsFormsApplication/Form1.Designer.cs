@@ -29,12 +29,10 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-			this.cipherTextBox = new System.Windows.Forms.RichTextBox();
 			this.analyzeButton = new System.Windows.Forms.Button();
-			this.resultTextBox = new System.Windows.Forms.RichTextBox();
 			this.cipherLabel = new System.Windows.Forms.Label();
 			this.methodLabel = new System.Windows.Forms.Label();
-			this.resultLabel = new System.Windows.Forms.Label();
+			this.keyLabel = new System.Windows.Forms.Label();
 			this.keyTextBox = new System.Windows.Forms.TextBox();
 			this.keyLengthLabel = new System.Windows.Forms.Label();
 			this.minUpDown = new System.Windows.Forms.NumericUpDown();
@@ -70,15 +68,16 @@
 			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.kasiskiBox = new System.Windows.Forms.CheckBox();
+			this.cipherTextBox = new System.Windows.Forms.TextBox();
+			this.resultTextBox = new System.Windows.Forms.TextBox();
+			this.directionLabel = new System.Windows.Forms.Label();
+			this.decryptionRadioButton = new System.Windows.Forms.RadioButton();
+			this.encryptionRadioButton = new System.Windows.Forms.RadioButton();
+			this.resultLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.minUpDown)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.maxUpDown)).BeginInit();
 			this.menuStrip.SuspendLayout();
 			this.SuspendLayout();
-			// 
-			// cipherTextBox
-			// 
-			resources.ApplyResources(this.cipherTextBox, "cipherTextBox");
-			this.cipherTextBox.Name = "cipherTextBox";
 			// 
 			// analyzeButton
 			// 
@@ -86,11 +85,6 @@
 			this.analyzeButton.Name = "analyzeButton";
 			this.analyzeButton.UseVisualStyleBackColor = true;
 			this.analyzeButton.Click += new System.EventHandler(this.analyzeButton_Click);
-			// 
-			// resultTextBox
-			// 
-			resources.ApplyResources(this.resultTextBox, "resultTextBox");
-			this.resultTextBox.Name = "resultTextBox";
 			// 
 			// cipherLabel
 			// 
@@ -102,10 +96,10 @@
 			resources.ApplyResources(this.methodLabel, "methodLabel");
 			this.methodLabel.Name = "methodLabel";
 			// 
-			// resultLabel
+			// keyLabel
 			// 
-			resources.ApplyResources(this.resultLabel, "resultLabel");
-			this.resultLabel.Name = "resultLabel";
+			resources.ApplyResources(this.keyLabel, "keyLabel");
+			this.keyLabel.Name = "keyLabel";
 			// 
 			// keyTextBox
 			// 
@@ -331,21 +325,61 @@
 			this.kasiskiBox.UseVisualStyleBackColor = true;
 			this.kasiskiBox.CheckedChanged += new System.EventHandler(this.kasiskiBox_CheckedChanged);
 			// 
+			// cipherTextBox
+			// 
+			resources.ApplyResources(this.cipherTextBox, "cipherTextBox");
+			this.cipherTextBox.Name = "cipherTextBox";
+			// 
+			// resultTextBox
+			// 
+			resources.ApplyResources(this.resultTextBox, "resultTextBox");
+			this.resultTextBox.Name = "resultTextBox";
+			// 
+			// directionLabel
+			// 
+			resources.ApplyResources(this.directionLabel, "directionLabel");
+			this.directionLabel.Name = "directionLabel";
+			// 
+			// decryptionRadioButton
+			// 
+			resources.ApplyResources(this.decryptionRadioButton, "decryptionRadioButton");
+			this.decryptionRadioButton.Checked = true;
+			this.decryptionRadioButton.Name = "decryptionRadioButton";
+			this.decryptionRadioButton.TabStop = true;
+			this.decryptionRadioButton.UseVisualStyleBackColor = true;
+			this.decryptionRadioButton.CheckedChanged += new System.EventHandler(this.decryptionRadioButton_CheckedChanged);
+			// 
+			// encryptionRadioButton
+			// 
+			resources.ApplyResources(this.encryptionRadioButton, "encryptionRadioButton");
+			this.encryptionRadioButton.Name = "encryptionRadioButton";
+			this.encryptionRadioButton.UseVisualStyleBackColor = true;
+			this.encryptionRadioButton.CheckedChanged += new System.EventHandler(this.encryptionRadioButton_CheckedChanged);
+			// 
+			// resultLabel
+			// 
+			resources.ApplyResources(this.resultLabel, "resultLabel");
+			this.resultLabel.Name = "resultLabel";
+			// 
 			// Form1
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.resultLabel);
+			this.Controls.Add(this.encryptionRadioButton);
+			this.Controls.Add(this.decryptionRadioButton);
+			this.Controls.Add(this.directionLabel);
+			this.Controls.Add(this.resultTextBox);
+			this.Controls.Add(this.cipherTextBox);
 			this.Controls.Add(this.kasiskiBox);
 			this.Controls.Add(this.maxUpDown);
 			this.Controls.Add(this.minUpDown);
 			this.Controls.Add(this.keyLengthLabel);
 			this.Controls.Add(this.keyTextBox);
-			this.Controls.Add(this.resultLabel);
+			this.Controls.Add(this.keyLabel);
 			this.Controls.Add(this.methodLabel);
 			this.Controls.Add(this.cipherLabel);
-			this.Controls.Add(this.resultTextBox);
 			this.Controls.Add(this.analyzeButton);
-			this.Controls.Add(this.cipherTextBox);
 			this.Controls.Add(this.menuStrip);
 			this.MainMenuStrip = this.menuStrip;
 			this.MaximizeBox = false;
@@ -361,12 +395,10 @@
 
 		#endregion
 
-		private System.Windows.Forms.RichTextBox cipherTextBox;
 		private System.Windows.Forms.Button analyzeButton;
-		private System.Windows.Forms.RichTextBox resultTextBox;
 		private System.Windows.Forms.Label cipherLabel;
 		private System.Windows.Forms.Label methodLabel;
-		private System.Windows.Forms.Label resultLabel;
+		private System.Windows.Forms.Label keyLabel;
 		private System.Windows.Forms.TextBox keyTextBox;
 		private System.Windows.Forms.Label keyLengthLabel;
 		private System.Windows.Forms.NumericUpDown minUpDown;
@@ -402,6 +434,12 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
 		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
 		private System.Windows.Forms.CheckBox kasiskiBox;
+		private System.Windows.Forms.TextBox cipherTextBox;
+		private System.Windows.Forms.TextBox resultTextBox;
+		private System.Windows.Forms.Label directionLabel;
+		private System.Windows.Forms.RadioButton decryptionRadioButton;
+		private System.Windows.Forms.RadioButton encryptionRadioButton;
+		private System.Windows.Forms.Label resultLabel;
 	}
 }
 

@@ -117,47 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cipherTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 48</value>
-  </data>
-  <data name="cipherTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 96</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cipherTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="cipherTextBox.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;cipherTextBox.Name" xml:space="preserve">
-    <value>cipherTextBox</value>
-  </data>
-  <data name="&gt;&gt;cipherTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cipherTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;cipherTextBox.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="analyzeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="analyzeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>511, 156</value>
+    <value>488, 188</value>
   </data>
   <data name="analyzeButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>111, 23</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="analyzeButton.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="analyzeButton.Text" xml:space="preserve">
-    <value>Выполнить</value>
+    <value>Анализ</value>
   </data>
   <data name="&gt;&gt;analyzeButton.Name" xml:space="preserve">
     <value>analyzeButton</value>
@@ -169,37 +145,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;analyzeButton.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="resultTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 245</value>
-  </data>
-  <data name="resultTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 96</value>
-  </data>
-  <data name="resultTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="resultTextBox.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;resultTextBox.Name" xml:space="preserve">
-    <value>resultTextBox</value>
-  </data>
-  <data name="&gt;&gt;resultTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;resultTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;resultTextBox.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>14</value>
   </data>
   <data name="cipherLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="cipherLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 29</value>
+    <value>19, 54</value>
   </data>
   <data name="cipherLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 13</value>
@@ -220,13 +172,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cipherLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>13</value>
   </data>
   <data name="methodLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="methodLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 150</value>
+    <value>19, 188</value>
   </data>
   <data name="methodLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 13</value>
@@ -247,37 +199,40 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;methodLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>12</value>
   </data>
-  <data name="resultLabel.AutoSize" type="System.Boolean, mscorlib">
+  <data name="keyLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="resultLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 209</value>
+  <data name="keyLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="resultLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 13</value>
+  <data name="keyLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 246</value>
   </data>
-  <data name="resultLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="keyLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 13</value>
+  </data>
+  <data name="keyLabel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="resultLabel.Text" xml:space="preserve">
-    <value>Результат</value>
+  <data name="keyLabel.Text" xml:space="preserve">
+    <value>Ключ</value>
   </data>
-  <data name="&gt;&gt;resultLabel.Name" xml:space="preserve">
-    <value>resultLabel</value>
+  <data name="&gt;&gt;keyLabel.Name" xml:space="preserve">
+    <value>keyLabel</value>
   </data>
-  <data name="&gt;&gt;resultLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;keyLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;resultLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;keyLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;resultLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;keyLabel.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="keyTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 209</value>
+    <value>105, 247</value>
   </data>
   <data name="keyTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -295,7 +250,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;keyTextBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>10</value>
   </data>
   <data name="keyLengthLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -304,7 +259,7 @@
     <value>NoControl</value>
   </data>
   <data name="keyLengthLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 183</value>
+    <value>19, 217</value>
   </data>
   <data name="keyLengthLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 13</value>
@@ -325,13 +280,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;keyLengthLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>9</value>
   </data>
   <data name="minUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 183</value>
+    <value>105, 216</value>
   </data>
   <data name="minUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 20</value>
+    <value>49, 20</value>
   </data>
   <data name="minUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -346,13 +301,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;minUpDown.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>8</value>
   </data>
   <data name="maxUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>222, 182</value>
+    <value>166, 216</value>
   </data>
   <data name="maxUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 20</value>
+    <value>45, 20</value>
   </data>
   <data name="maxUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -367,45 +322,15 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;maxUpDown.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>7</value>
   </data>
   <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>624, 24</value>
-  </data>
-  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="menuStrip.Text" xml:space="preserve">
-    <value>menuStrip</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
-    <value>menuStrip</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;File</value>
-  </data>
   <data name="newToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAAERSURBVDhPrZDbSgJRGIXnpewd6jXsjSQvIrwoI0RQMChU
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAERSURBVDhPrZDbSgJRGIXnpewd6jXsjSQvIrwoI0RQMChU
         0iiDPCGiE3ZCRkvR8VzTeBhnyR5/ccaZNnPhB4t9sdf6Ln5hb8QeathNJFVFKF5C8DqL4ksDVHWGDf7j
         LHyPg6NjviSaFqlu5yQYR+KpupaIkrMknCxT3Y7v/NYYb0ITK1c3BarbWWhLQ7IR0cTKReyZ6lZ0XYei
         ztHpK4bAc+h1FgQijzSxMptrGIxVSO0xX3AaStFki7bUMVFmaMm/eJMGfIH/MkGzLep0AXn4h/r3CJV3
@@ -422,7 +347,7 @@
   <data name="openToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAAJHSURBVDhPxZBdSNNhFMb/F110ZZEVhVBgeeHNICiiuggp
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAJHSURBVDhPxZBdSNNhFMb/F110ZZEVhVBgeeHNICiiuggp
         olAUyyxI0oSaH1QYC3N+tKnp5ubm1JUua5uuqdNKMwr7kApFItTUkWZqVhSVYmao5Nevvy7UoYR3HXh4
         4XCe33nOKyy3lAY7l9RWMo0O/raWXxEyo5spVYTNvOGyfIRPfW+ptOkXqaPl6T83hcRmExSdgzAz3NVm
         YWyoYla/B+1M9JtxWLPpaH22JORIjI6gKAMB0jyEimIdo4OlbuaprwVMOOMovammpDADc34qppwUrmnl
@@ -447,7 +372,7 @@
   <data name="saveToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAAIySURBVDhPrZLfS5NRGMfff6H7boIuuq2pMZyL1eAt11CW
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAIySURBVDhPrZLfS5NRGMfff6H7boIuuq2pMZyL1eAt11CW
         DcOKsB9vpFmaLtNExco0av6CbIVLJ61Wk3BSkT/AFCkRZSpZmrmiJQ41xSaCwdfznL15XEUX0Reem5f3
         8znnec4j/Zc8fxYGla91CS3eRTx0z6OpMYS7jmnU1X6B/VYA18snUVoyjsKCt8jLHcH5c36ouCQR2NUJ
         1Nas4G9ZXlmFKbULh1Kf8lJxSfI+WeCCyopv6q+/h+DQ/DJ2WV5Ao1FgPegRAveDOS4oLfmq/h6dn/DH
@@ -478,7 +403,7 @@
   <data name="printToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAAIpSURBVDhPtZL/T1JRGMb5p1itrVZbbRpqZbawnBENV1I0
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAIpSURBVDhPtZL/T1JRGMb5p1itrVZbbRpqZbawnBENV1I0
         jGlByTSyJTXJwq2oKZQb1KAv6JCYWSxvBrkkZUq4CeQEiRABFeLL072Xa0zRra31bO8v57zP5znnPYf1
         X+TxhWF6O7VtGYcnwbSWijKPOLzYrPSvLPwLS3huGUMlT7o9wGD9grVUBj+icdid03S9tDmgNxNwTgVQ
         J+rA8XNtWwM+uuZATMwxmQVRycuJFNyzIRitDlScugKzjSgFRGJJaIwEsrk8AsHIhnSL/Ssck37UNipQ
@@ -499,7 +424,7 @@
   <data name="printPreviewToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAAGCSURBVDhPnZK9S0JRGMb9F1xb2gqaq6mhwCGDtvYIIyLI
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAGCSURBVDhPnZK9S0JRGMb9F1xb2gqaq6mhwCGDtvYIIyLI
         cJOE1paoIYpMKUjFRDH87lpoakGlIZF9DA2hZJEQhJXl1xPn3HPV29WQfvBwOfA+P95zuDJ39A6/4wyl
         YOOSMHvOcHGThuwvSKEVRvsR+pQqWD3R1pK98DUbl7Jm5hA8SfESd6S5xH5wycalrO4E0D8yWQuriLH6
         E2xcSqlcoRJBxCpiTO5TNi4m/ZgDF4nDsOulsfujyGRzUsmWM8YqdcggKbveS3A88bEkslRye58RSzZt
@@ -524,11 +449,11 @@
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>E&amp;xit</value>
   </data>
-  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 20</value>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
   </data>
-  <data name="editToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Edit</value>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;File</value>
   </data>
   <data name="undoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 22</value>
@@ -548,7 +473,7 @@
   <data name="cutToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAAGDSURBVDhPrZFNSwJRGIX9NYGbFoUlFElY1EJQKEYhCJsi
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAGDSURBVDhPrZFNSwJRGIX9NYGbFoUlFElY1EJQKEYhCJsi
         LaVsERnRF5iCaSZJO1toCDVGFkgoFpWQWWRR2aIvUxm1BKN1wSnHCFw4TOCzue+9nPNw4eVVnav4Izzb
         QfxeGZ5TWaxT/rK3irzmC7CsusvC1G4IkbNLboIiDieF4GGUKeTeClDpppF8eeEu2PIfwfrzizSdw3Hk
         EnKlFpkMzV2wH77AosOFTV8A+vkl9CiHuJeLJNNZjM8tYWB0FkTvMAwmy/8ERTR6CwjlGAi1Ccence6C
@@ -567,7 +492,7 @@
   <data name="copyToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAAHkSURBVDhPvZHfS1NhHIf3p5QypLr2D4goMwoMCi/qIugH
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAHkSURBVDhPvZHfS1NhHIf3p5QypLr2D4goMwoMCi/qIugH
         Xe1Cr7qKDIMkZixwNhfWLGWbnuki0kXKzLU023KubBNPJrbRdOzocm6e2dPOO21mMS+CHvjcvOf9PF++
         79H9M+7RT2iRRsIi9sEAXe43yAvf2LpSHq28G9uAnytNT4jMLewtcQ2Ht2pF8ps/aOt+gccX5lxD694S
         +1BQFD1RkN5DSFa4Z3uONKbgHE3h8KZ4OJTC1J8UiSzmfhd2uf1CoJHbyKOsZokl0kKwm+aeJaov+wjO
@@ -587,7 +512,7 @@
   <data name="pasteToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAAJSSURBVDhPtZJrSJNRGMdf6IN9KbpQn/pUEH2JIoLqQ0Zh
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAJSSURBVDhPtZJrSJNRGMdf6IN9KbpQn/pUEH2JIoLqQ0Zh
         FqYZRmJG1iKmUqKyLB2pqSm6vC1Nm5GXoeatEsVJ0RASR3eNzegikRq5lrV3857Fr/d9ddlICoL+8OfA
         Oef/e57zcIT/os7WLMw302muSGJ2689qqi7A44q8IzjtNYzarzHQm8tZtT8FmRqu6LToMxN+B8qhCbGR
         KVcDE85ajKUaxoaryEuL4UVXIudPB5Ko2oy98xjDptXERuz3hsgAOTzlqqMk6yjdllzE90UM9Wp5azlB
@@ -615,11 +540,11 @@
   <data name="selectAllToolStripMenuItem.Text" xml:space="preserve">
     <value>Select &amp;All</value>
   </data>
-  <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 20</value>
+  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 20</value>
   </data>
-  <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Tools</value>
+  <data name="editToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Edit</value>
   </data>
   <data name="customizeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 22</value>
@@ -633,11 +558,11 @@
   <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Options</value>
   </data>
-  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
+  <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
   </data>
-  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Help</value>
+  <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Tools</value>
   </data>
   <data name="contentsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 22</value>
@@ -666,20 +591,50 @@
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;About...</value>
   </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
+  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>624, 24</value>
+  </data>
+  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
   <data name="kasiskiBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="kasiskiBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 150</value>
+    <value>105, 188</value>
   </data>
   <data name="kasiskiBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 17</value>
+    <value>198, 17</value>
   </data>
   <data name="kasiskiBox.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
   <data name="kasiskiBox.Text" xml:space="preserve">
-    <value>Метод Касиски</value>
+    <value>Подсчёт триграмм (тест Касиски)</value>
   </data>
   <data name="&gt;&gt;kasiskiBox.Name" xml:space="preserve">
     <value>kasiskiBox</value>
@@ -691,6 +646,177 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;kasiskiBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="cipherTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 75</value>
+  </data>
+  <data name="cipherTextBox.MaxLength" type="System.Int32, mscorlib">
+    <value>2147483647</value>
+  </data>
+  <data name="cipherTextBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cipherTextBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="cipherTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>580, 100</value>
+  </data>
+  <data name="cipherTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;cipherTextBox.Name" xml:space="preserve">
+    <value>cipherTextBox</value>
+  </data>
+  <data name="&gt;&gt;cipherTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cipherTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cipherTextBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="resultTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 297</value>
+  </data>
+  <data name="resultTextBox.MaxLength" type="System.Int32, mscorlib">
+    <value>2147483647</value>
+  </data>
+  <data name="resultTextBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="resultTextBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="resultTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>580, 100</value>
+  </data>
+  <data name="resultTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;resultTextBox.Name" xml:space="preserve">
+    <value>resultTextBox</value>
+  </data>
+  <data name="&gt;&gt;resultTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;resultTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;resultTextBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="directionLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="directionLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 30</value>
+  </data>
+  <data name="directionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
+  </data>
+  <data name="directionLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="directionLabel.Text" xml:space="preserve">
+    <value>Направление:</value>
+  </data>
+  <data name="&gt;&gt;directionLabel.Name" xml:space="preserve">
+    <value>directionLabel</value>
+  </data>
+  <data name="&gt;&gt;directionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;directionLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;directionLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="decryptionRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="decryptionRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="decryptionRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 28</value>
+  </data>
+  <data name="decryptionRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 17</value>
+  </data>
+  <data name="decryptionRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="decryptionRadioButton.Text" xml:space="preserve">
+    <value>Дешифрование</value>
+  </data>
+  <data name="&gt;&gt;decryptionRadioButton.Name" xml:space="preserve">
+    <value>decryptionRadioButton</value>
+  </data>
+  <data name="&gt;&gt;decryptionRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;decryptionRadioButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;decryptionRadioButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="encryptionRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="encryptionRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>217, 27</value>
+  </data>
+  <data name="encryptionRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 17</value>
+  </data>
+  <data name="encryptionRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="encryptionRadioButton.Text" xml:space="preserve">
+    <value>Шифрование</value>
+  </data>
+  <data name="&gt;&gt;encryptionRadioButton.Name" xml:space="preserve">
+    <value>encryptionRadioButton</value>
+  </data>
+  <data name="&gt;&gt;encryptionRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;encryptionRadioButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;encryptionRadioButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="resultLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="resultLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 278</value>
+  </data>
+  <data name="resultLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 13</value>
+  </data>
+  <data name="resultLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="resultLabel.Text" xml:space="preserve">
+    <value>Результат</value>
+  </data>
+  <data name="&gt;&gt;resultLabel.Name" xml:space="preserve">
+    <value>resultLabel</value>
+  </data>
+  <data name="&gt;&gt;resultLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;resultLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;resultLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -700,7 +826,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>624, 442</value>
+    <value>624, 427</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
