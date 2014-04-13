@@ -67,6 +67,13 @@
 			this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.языкToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.enToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.ruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.esToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.deToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.frToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.ptToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.kasiskiBox = new System.Windows.Forms.CheckBox();
 			this.cipherTextBox = new System.Windows.Forms.TextBox();
 			this.resultTextBox = new System.Windows.Forms.TextBox();
@@ -74,6 +81,7 @@
 			this.decryptionRadioButton = new System.Windows.Forms.RadioButton();
 			this.encryptionRadioButton = new System.Windows.Forms.RadioButton();
 			this.resultLabel = new System.Windows.Forms.Label();
+			this.cleanButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.minUpDown)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.maxUpDown)).BeginInit();
 			this.menuStrip.SuspendLayout();
@@ -140,7 +148,8 @@
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
             this.toolsToolStripMenuItem,
-            this.helpToolStripMenuItem});
+            this.helpToolStripMenuItem,
+            this.языкToolStripMenuItem});
 			resources.ApplyResources(this.menuStrip, "menuStrip");
 			this.menuStrip.Name = "menuStrip";
 			// 
@@ -318,6 +327,54 @@
 			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
 			resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
 			// 
+			// языкToolStripMenuItem
+			// 
+			this.языкToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.enToolStripMenuItem,
+            this.ruToolStripMenuItem,
+            this.esToolStripMenuItem,
+            this.deToolStripMenuItem,
+            this.frToolStripMenuItem,
+            this.ptToolStripMenuItem1});
+			this.языкToolStripMenuItem.Name = "языкToolStripMenuItem";
+			resources.ApplyResources(this.языкToolStripMenuItem, "языкToolStripMenuItem");
+			// 
+			// enToolStripMenuItem
+			// 
+			this.enToolStripMenuItem.Name = "enToolStripMenuItem";
+			resources.ApplyResources(this.enToolStripMenuItem, "enToolStripMenuItem");
+			this.enToolStripMenuItem.Click += new System.EventHandler(this.enToolStripMenuItem_Click);
+			// 
+			// ruToolStripMenuItem
+			// 
+			this.ruToolStripMenuItem.Name = "ruToolStripMenuItem";
+			resources.ApplyResources(this.ruToolStripMenuItem, "ruToolStripMenuItem");
+			this.ruToolStripMenuItem.Click += new System.EventHandler(this.ruToolStripMenuItem_Click);
+			// 
+			// esToolStripMenuItem
+			// 
+			this.esToolStripMenuItem.Name = "esToolStripMenuItem";
+			resources.ApplyResources(this.esToolStripMenuItem, "esToolStripMenuItem");
+			this.esToolStripMenuItem.Click += new System.EventHandler(this.esToolStripMenuItem_Click);
+			// 
+			// deToolStripMenuItem
+			// 
+			this.deToolStripMenuItem.Name = "deToolStripMenuItem";
+			resources.ApplyResources(this.deToolStripMenuItem, "deToolStripMenuItem");
+			this.deToolStripMenuItem.Click += new System.EventHandler(this.deToolStripMenuItem_Click);
+			// 
+			// frToolStripMenuItem
+			// 
+			this.frToolStripMenuItem.Name = "frToolStripMenuItem";
+			resources.ApplyResources(this.frToolStripMenuItem, "frToolStripMenuItem");
+			this.frToolStripMenuItem.Click += new System.EventHandler(this.frToolStripMenuItem_Click);
+			// 
+			// ptToolStripMenuItem1
+			// 
+			this.ptToolStripMenuItem1.Name = "ptToolStripMenuItem1";
+			resources.ApplyResources(this.ptToolStripMenuItem1, "ptToolStripMenuItem1");
+			this.ptToolStripMenuItem1.Click += new System.EventHandler(this.ptToolStripMenuItem1_Click);
+			// 
 			// kasiskiBox
 			// 
 			resources.ApplyResources(this.kasiskiBox, "kasiskiBox");
@@ -361,10 +418,18 @@
 			resources.ApplyResources(this.resultLabel, "resultLabel");
 			this.resultLabel.Name = "resultLabel";
 			// 
+			// cleanButton
+			// 
+			resources.ApplyResources(this.cleanButton, "cleanButton");
+			this.cleanButton.Name = "cleanButton";
+			this.cleanButton.UseVisualStyleBackColor = true;
+			this.cleanButton.Click += new System.EventHandler(this.cleanButton_Click);
+			// 
 			// Form1
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.cleanButton);
 			this.Controls.Add(this.resultLabel);
 			this.Controls.Add(this.encryptionRadioButton);
 			this.Controls.Add(this.decryptionRadioButton);
@@ -440,6 +505,14 @@
 		private System.Windows.Forms.RadioButton decryptionRadioButton;
 		private System.Windows.Forms.RadioButton encryptionRadioButton;
 		private System.Windows.Forms.Label resultLabel;
+		private System.Windows.Forms.Button cleanButton;
+		private System.Windows.Forms.ToolStripMenuItem языкToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem enToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem ruToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem esToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem deToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem frToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem ptToolStripMenuItem1;
 	}
 }
 

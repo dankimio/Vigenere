@@ -123,17 +123,17 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="analyzeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>488, 188</value>
+    <value>501, 195</value>
   </data>
   <data name="analyzeButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 23</value>
+    <value>100, 23</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="analyzeButton.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="analyzeButton.Text" xml:space="preserve">
-    <value>Анализ</value>
+    <value>Дешифровать</value>
   </data>
   <data name="&gt;&gt;analyzeButton.Name" xml:space="preserve">
     <value>analyzeButton</value>
@@ -145,13 +145,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;analyzeButton.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="cipherLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="cipherLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 54</value>
+    <value>21, 61</value>
   </data>
   <data name="cipherLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 13</value>
@@ -172,13 +172,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cipherLabel.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="methodLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="methodLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 188</value>
+    <value>21, 195</value>
   </data>
   <data name="methodLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 13</value>
@@ -199,7 +199,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;methodLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="keyLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -208,7 +208,7 @@
     <value>NoControl</value>
   </data>
   <data name="keyLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 246</value>
+    <value>21, 253</value>
   </data>
   <data name="keyLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 13</value>
@@ -229,10 +229,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;keyLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="keyTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 247</value>
+    <value>107, 254</value>
   </data>
   <data name="keyTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -250,7 +250,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;keyTextBox.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="keyLengthLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -259,7 +259,7 @@
     <value>NoControl</value>
   </data>
   <data name="keyLengthLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 217</value>
+    <value>21, 224</value>
   </data>
   <data name="keyLengthLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 13</value>
@@ -280,13 +280,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;keyLengthLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="minUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 216</value>
+    <value>107, 223</value>
   </data>
   <data name="minUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 20</value>
+    <value>45, 20</value>
   </data>
   <data name="minUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -301,10 +301,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;minUpDown.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="maxUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 216</value>
+    <value>162, 223</value>
   </data>
   <data name="maxUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -322,11 +322,101 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;maxUpDown.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 20</value>
+  </data>
+  <data name="editToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Edit</value>
+  </data>
+  <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Tools</value>
+  </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
+  <data name="enToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 22</value>
+  </data>
+  <data name="enToolStripMenuItem.Text" xml:space="preserve">
+    <value>Английский</value>
+  </data>
+  <data name="ruToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 22</value>
+  </data>
+  <data name="ruToolStripMenuItem.Text" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="esToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 22</value>
+  </data>
+  <data name="esToolStripMenuItem.Text" xml:space="preserve">
+    <value>Испанский</value>
+  </data>
+  <data name="deToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 22</value>
+  </data>
+  <data name="deToolStripMenuItem.Text" xml:space="preserve">
+    <value>Немецкий</value>
+  </data>
+  <data name="frToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 22</value>
+  </data>
+  <data name="frToolStripMenuItem.Text" xml:space="preserve">
+    <value>Францусзский</value>
+  </data>
+  <data name="ptToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 22</value>
+  </data>
+  <data name="ptToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Португальский</value>
+  </data>
+  <data name="языкToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="языкToolStripMenuItem.Text" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>624, 24</value>
+  </data>
+  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
   <data name="newToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -449,12 +539,6 @@
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>E&amp;xit</value>
   </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;File</value>
-  </data>
   <data name="undoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 22</value>
   </data>
@@ -540,12 +624,6 @@
   <data name="selectAllToolStripMenuItem.Text" xml:space="preserve">
     <value>Select &amp;All</value>
   </data>
-  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 20</value>
-  </data>
-  <data name="editToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Edit</value>
-  </data>
   <data name="customizeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 22</value>
   </data>
@@ -557,12 +635,6 @@
   </data>
   <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Options</value>
-  </data>
-  <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 20</value>
-  </data>
-  <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Tools</value>
   </data>
   <data name="contentsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 22</value>
@@ -591,41 +663,11 @@
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;About...</value>
   </data>
-  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
-  </data>
-  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Help</value>
-  </data>
-  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>624, 24</value>
-  </data>
-  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="menuStrip.Text" xml:space="preserve">
-    <value>menuStrip</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
-    <value>menuStrip</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
   <data name="kasiskiBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="kasiskiBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 188</value>
+    <value>107, 195</value>
   </data>
   <data name="kasiskiBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 17</value>
@@ -646,10 +688,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;kasiskiBox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="cipherTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 75</value>
+    <value>21, 82</value>
   </data>
   <data name="cipherTextBox.MaxLength" type="System.Int32, mscorlib">
     <value>2147483647</value>
@@ -676,10 +718,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cipherTextBox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="resultTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 297</value>
+    <value>21, 304</value>
   </data>
   <data name="resultTextBox.MaxLength" type="System.Int32, mscorlib">
     <value>2147483647</value>
@@ -706,13 +748,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;resultTextBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="directionLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="directionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 30</value>
+    <value>21, 30</value>
   </data>
   <data name="directionLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 13</value>
@@ -733,7 +775,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;directionLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="decryptionRadioButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -742,7 +784,7 @@
     <value>NoControl</value>
   </data>
   <data name="decryptionRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 28</value>
+    <value>109, 28</value>
   </data>
   <data name="decryptionRadioButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 17</value>
@@ -763,13 +805,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;decryptionRadioButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="encryptionRadioButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="encryptionRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>217, 27</value>
+    <value>219, 27</value>
   </data>
   <data name="encryptionRadioButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 17</value>
@@ -790,13 +832,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;encryptionRadioButton.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="resultLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="resultLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 278</value>
+    <value>21, 285</value>
   </data>
   <data name="resultLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
@@ -817,6 +859,30 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;resultLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cleanButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>379, 195</value>
+  </data>
+  <data name="cleanButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="cleanButton.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="cleanButton.Text" xml:space="preserve">
+    <value>Очистить</value>
+  </data>
+  <data name="&gt;&gt;cleanButton.Name" xml:space="preserve">
+    <value>cleanButton</value>
+  </data>
+  <data name="&gt;&gt;cleanButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cleanButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cleanButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1006,6 +1072,48 @@
     <value>aboutToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;aboutToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;языкToolStripMenuItem.Name" xml:space="preserve">
+    <value>языкToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;языкToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;enToolStripMenuItem.Name" xml:space="preserve">
+    <value>enToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;enToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ruToolStripMenuItem.Name" xml:space="preserve">
+    <value>ruToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ruToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;esToolStripMenuItem.Name" xml:space="preserve">
+    <value>esToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;esToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deToolStripMenuItem.Name" xml:space="preserve">
+    <value>deToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;deToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;frToolStripMenuItem.Name" xml:space="preserve">
+    <value>frToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;frToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ptToolStripMenuItem1.Name" xml:space="preserve">
+    <value>ptToolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;ptToolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

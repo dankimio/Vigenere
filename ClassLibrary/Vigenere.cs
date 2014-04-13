@@ -11,12 +11,11 @@ namespace ClassLibrary
 	/// </summary>
     public class Vigenere
     {
-		// Index of coincidence
+		// Index of coincidence (Нормализованное число, то есть индекс делится на кол-во букв в алфавите)
 		static double ioc = 0.0667;
 
 		// Данные частотного анализа
-		static Dictionary<string, double> english = new Dictionary<string, double>()
-		{
+		const Dictionary<string, double> english = new Dictionary<string, double>() {
 			{"A", 8.167}, {"B", 1.492},	{"C", 2.782}, {"D", 4.253},
 			{"E", 12.702}, {"F", 2.228}, {"G", 2.015}, {"H", 6.094},
 			{"I", 6.996}, {"J", 0.153},	{"K", 0.772}, {"L", 4.025},
@@ -26,6 +25,68 @@ namespace ClassLibrary
 			{"Y", 1.974}, {"Z", 0.074},	{"maxValue", 12.702}, {"ioc", 0.0667}
 		};
 
+		const Dictionary<string, double> russian = new Dictionary<string, double>() {
+			{"А", 7.998}, {"Б", 1.592}, {"В", 4.533}, {"Г", 1.687}, {"Д", 2.977}, {"Е", 8.483},
+			{"Ё", 0.013}, {"Ж", 0.094}, {"З", 1.641}, {"И", 7.367}, {"Й", 1.208}, {"К", 3.486},
+			{"Л", 4.343}, {"М", 3.203}, {"Н", 6.700}, {"О", 10.983}, {"П", 2.804}, {"Р", 4.746},
+			{"С", 5.473}, {"Т", 6.318}, {"У", 2.615}, {"Ф", 0.267}, {"Х", 0.966}, {"Ц", 0.486},
+			{"Ч", 1.450}, {"Ш", 0.718}, {"Щ", 0.361}, {"Ъ", 0.037}, {"Ы", 1.898}, {"Ь", 1.735},
+			{"Э", 0.331}, {"Ю", 0.639}, {"Я", 2.001}, {"maxValue", 10.983}, {"ioc", 0.0553}
+		};
+
+		const Dictionary<string, double> spanish = new Dictionary<string, double>() {
+			{"A", 12.525}, {"B", 2.215}, {"C", 4.139}, {"D", 5.860},
+			{"E", 13.681}, {"F", 0.692}, {"G", 1.768}, {"H", 0.703},
+			{"I", 6.247}, {"J", 0.443},	{"K", 0.011}, {"L", 4.967},
+			{"M", 3.157}, {"N", 6.712}, {"O", 8.683}, {"P", 2.510},
+			{"Q", 0.877}, {"R", 6.871},	{"S", 7.977}, {"T", 4.632},
+			{"U", 3.927}, {"V", 1.138}, {"W", 0.017}, {"X", 0.215},
+			{"Y", 1.008}, {"Z", 0.517},	{"Á", 0.502}, {"É", 0.433},
+			{"Í", 0.725}, {"Ñ", 0.311}, {"Ó", 0.827}, {"Ú", 0.168},
+			{"Ü", 0.995}, {"maxValue", 13.861}, {"ioc", 0.0775}
+		};
+
+		const Dictionary<string, double> german = new Dictionary<string, double>() {
+			{"A", 6.516}, {"B", 1.886}, {"C", 2.732}, {"D", 5.076},
+			{"E", 17.396}, {"F", 1.656}, {"G", 3.009}, {"H", 4.757},
+			{"I", 7.550}, {"J", 0.268},	{"K", 1.417}, {"L", 3.437},
+			{"M", 2.534}, {"N", 9.776}, {"O", 2.594}, {"P", 0.670},
+			{"Q", 0.018}, {"R", 7.003},	{"S", 7.273}, {"T", 6.154},
+			{"U", 4.346}, {"V", 0.846}, {"W", 1.921}, {"X", 0.034},
+			{"Y", 0.039}, {"Z", 1.134},	{"Ä", 0.447}, {"Ö", 0.537},
+			{"Ü", 0.995}, {"maxValue", 17.396}, {"ioc", 0.0762}
+		};
+
+		const Dictionary<string, double> french = new Dictionary<string, double>() {
+			{"A", 7.636}, {"B", 0.901},	{"C", 3.260}, {"D", 3.669},
+			{"E", 14.715}, {"F", 1.066}, {"G", 0.866}, {"H", 0.737},
+			{"I", 7.529}, {"J", 0.548},	{"K", 0.049}, {"L", 5.456},
+			{"M", 2.968}, {"N", 7.095}, {"O", 5.378}, {"P", 2.521},
+			{"Q", 1.362}, {"R", 6.553},	{"S", 7.948}, {"T", 7.244},
+			{"U", 6.311}, {"V", 1.628}, {"W", 0.074}, {"X", 0.427},
+			{"Y", 0.128}, {"Z", 0.326}, {"À", 0.486}, {"Â", 0.051},
+			{"Ç", 0.085}, {"È", 0.271}, {"É", 1.504}, {"Ê", 0.225},
+			{"Ë", 0.001}, {"Î", 0.045}, {"Ï", 0.005}, {"Ô", 0.023}, 
+			{"Ù", 0.058}, {"Œ", 0.018}, {"maxValue", 14.715}, {"ioc", 0.0778}
+		};
+
+		const Dictionary<string, double> portuguese = new Dictionary<string, double>() {
+			{"A", 14.634}, {"B", 1.043}, {"C", 3.882}, {"D", 4.992},
+			{"E", 12.570}, {"F", 1.023}, {"G", 1.303}, {"H", 0.781},
+			{"I", 6.186}, {"J", 0.397},	{"K", 0.015}, {"L", 2.779},
+			{"M", 4.738}, {"N", 5.046}, {"O", 10.735}, {"P", 2.523},
+			{"Q", 1.204}, {"R", 6.530},	{"S", 7.805}, {"T", 4.736},
+			{"U", 4.634}, {"V", 1.665}, {"W", 0.037}, {"X", 0.253},
+			{"Y", 0.006}, {"Z", 0.470},	{"À", 0.072}, {"Á", 0.118},
+			{"Â", 0.562}, {"Ã", 0.733}, {"Ç", 0.530}, {"É", 0.337},
+			{"Ê", 0.450}, {"Í", 0.132}, {"Ó", 0.296}, {"Ô", 0.635},
+			{"Ú", 0.207}, {"Ü", 0.026}, {"maxValue", 14.634}, {"ioc", 0.0745}
+		};
+
+		// Текущий язык класса
+		static Dictionary<string, double> activeData = english;
+		static int letters = 26;
+
 		/// <summary>
 		/// Шифрование текста с использованием ключа
 		/// </summary>
@@ -34,6 +95,11 @@ namespace ClassLibrary
 		/// <returns>Шифротекст</returns>
 		public static string Encipher(string text, string key)
 		{
+			if (key == String.Empty)
+				throw new System.ArgumentException("Отсутствует ключ");
+			if (!key.All(Char.IsLetter))
+				throw new System.ArgumentException("Неверный ключ");
+
 			List<char> cipherText = new List<char>();
 			int position = 0;
 			int keyLength = key.Length;
@@ -420,6 +486,41 @@ namespace ClassLibrary
 				throw new System.ArgumentException("В тексте отсутствуют буквы");
 
 			return FindKey(text, minLength, maxLength);
+		}
+
+		public static void SetLanguage(string language) {
+			language = language.ToLower();
+
+			switch (language) {
+				case "en":
+					activeData = english;
+					letters = english.Count - 2;
+					break;
+				case "ru":
+					activeData = russian;
+					letters = russian.Count - 2;
+					break;
+				case "es":
+					activeData = spanish;
+					letters = spanish.Count - 2;
+					break;
+				case "de":
+					activeData = german;
+					letters = german.Count - 2;
+					break;
+				case "fr":
+					activeData = french;
+					letters = french.Count - 2;
+					break;
+				case "pt":
+					activeData = portuguese;
+					letters = portuguese.Count - 2;
+					break;
+				default:
+					activeData = english;
+					letters = english.Count - 2;
+					break;
+			}
 		}
 
 		/// <summary>
