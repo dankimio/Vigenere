@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace ClassLibrary
 {
@@ -15,7 +16,7 @@ namespace ClassLibrary
 		static double ioc = 0.0667;
 
 		// Данные частотного анализа
-		const Dictionary<string, double> english = new Dictionary<string, double>() {
+		static Dictionary<string, double> english = new Dictionary<string, double>() {
 			{"A", 8.167}, {"B", 1.492},	{"C", 2.782}, {"D", 4.253},
 			{"E", 12.702}, {"F", 2.228}, {"G", 2.015}, {"H", 6.094},
 			{"I", 6.996}, {"J", 0.153},	{"K", 0.772}, {"L", 4.025},
@@ -25,16 +26,7 @@ namespace ClassLibrary
 			{"Y", 1.974}, {"Z", 0.074},	{"maxValue", 12.702}, {"ioc", 0.0667}
 		};
 
-		const Dictionary<string, double> russian = new Dictionary<string, double>() {
-			{"А", 7.998}, {"Б", 1.592}, {"В", 4.533}, {"Г", 1.687}, {"Д", 2.977}, {"Е", 8.483},
-			{"Ё", 0.013}, {"Ж", 0.094}, {"З", 1.641}, {"И", 7.367}, {"Й", 1.208}, {"К", 3.486},
-			{"Л", 4.343}, {"М", 3.203}, {"Н", 6.700}, {"О", 10.983}, {"П", 2.804}, {"Р", 4.746},
-			{"С", 5.473}, {"Т", 6.318}, {"У", 2.615}, {"Ф", 0.267}, {"Х", 0.966}, {"Ц", 0.486},
-			{"Ч", 1.450}, {"Ш", 0.718}, {"Щ", 0.361}, {"Ъ", 0.037}, {"Ы", 1.898}, {"Ь", 1.735},
-			{"Э", 0.331}, {"Ю", 0.639}, {"Я", 2.001}, {"maxValue", 10.983}, {"ioc", 0.0553}
-		};
-
-		const Dictionary<string, double> spanish = new Dictionary<string, double>() {
+		static Dictionary<string, double> spanish = new Dictionary<string, double>() {
 			{"A", 12.525}, {"B", 2.215}, {"C", 4.139}, {"D", 5.860},
 			{"E", 13.681}, {"F", 0.692}, {"G", 1.768}, {"H", 0.703},
 			{"I", 6.247}, {"J", 0.443},	{"K", 0.011}, {"L", 4.967},
@@ -46,7 +38,7 @@ namespace ClassLibrary
 			{"Ü", 0.995}, {"maxValue", 13.861}, {"ioc", 0.0775}
 		};
 
-		const Dictionary<string, double> german = new Dictionary<string, double>() {
+		static Dictionary<string, double> german = new Dictionary<string, double>() {
 			{"A", 6.516}, {"B", 1.886}, {"C", 2.732}, {"D", 5.076},
 			{"E", 17.396}, {"F", 1.656}, {"G", 3.009}, {"H", 4.757},
 			{"I", 7.550}, {"J", 0.268},	{"K", 1.417}, {"L", 3.437},
@@ -57,7 +49,7 @@ namespace ClassLibrary
 			{"Ü", 0.995}, {"maxValue", 17.396}, {"ioc", 0.0762}
 		};
 
-		const Dictionary<string, double> french = new Dictionary<string, double>() {
+		static Dictionary<string, double> french = new Dictionary<string, double>() {
 			{"A", 7.636}, {"B", 0.901},	{"C", 3.260}, {"D", 3.669},
 			{"E", 14.715}, {"F", 1.066}, {"G", 0.866}, {"H", 0.737},
 			{"I", 7.529}, {"J", 0.548},	{"K", 0.049}, {"L", 5.456},
@@ -70,7 +62,7 @@ namespace ClassLibrary
 			{"Ù", 0.058}, {"Œ", 0.018}, {"maxValue", 14.715}, {"ioc", 0.0778}
 		};
 
-		const Dictionary<string, double> portuguese = new Dictionary<string, double>() {
+		static Dictionary<string, double> portuguese = new Dictionary<string, double>() {
 			{"A", 14.634}, {"B", 1.043}, {"C", 3.882}, {"D", 4.992},
 			{"E", 12.570}, {"F", 1.023}, {"G", 1.303}, {"H", 0.781},
 			{"I", 6.186}, {"J", 0.397},	{"K", 0.015}, {"L", 2.779},
@@ -99,6 +91,8 @@ namespace ClassLibrary
 				throw new System.ArgumentException("Отсутствует ключ");
 			if (!key.All(Char.IsLetter))
 				throw new System.ArgumentException("Неверный ключ");
+
+			text = RemoveDiacritics(text);
 
 			List<char> cipherText = new List<char>();
 			int position = 0;
@@ -144,6 +138,8 @@ namespace ClassLibrary
 		/// <returns>Открытый текст</returns>
 		public static string Decipher(string text, string key)
 		{
+			text = RemoveDiacritics(text);
+
 			List<char> plainText = new List<char>();
 			int position = 0;
 			int keyLength = key.Length;
@@ -188,6 +184,7 @@ namespace ClassLibrary
 		/// <returns>Шифротекст</returns>
 		static string CaesarEncipher(string text, int key)
 		{
+			text = RemoveDiacritics(text);
 			List<char> cipherText = new List<char>();
 
 			foreach (char letter in text)
@@ -485,7 +482,7 @@ namespace ClassLibrary
 			if (!hasLetters)
 				throw new System.ArgumentException("В тексте отсутствуют буквы");
 
-			return FindKey(text, minLength, maxLength);
+			return FindKey(RemoveDiacritics(text), minLength, maxLength);
 		}
 
 		public static void SetLanguage(string language) {
@@ -495,10 +492,6 @@ namespace ClassLibrary
 				case "en":
 					activeData = english;
 					letters = english.Count - 2;
-					break;
-				case "ru":
-					activeData = russian;
-					letters = russian.Count - 2;
 					break;
 				case "es":
 					activeData = spanish;
@@ -521,6 +514,20 @@ namespace ClassLibrary
 					letters = english.Count - 2;
 					break;
 			}
+		}
+
+		static string RemoveDiacritics(string text) {
+			var normalizedString = text.Normalize(NormalizationForm.FormD);
+			var stringBuilder = new StringBuilder();
+
+			foreach (var c in normalizedString) {
+				var unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
+				if (unicodeCategory != UnicodeCategory.NonSpacingMark) {
+					stringBuilder.Append(c);
+				}
+			}
+
+			return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
 		}
 
 		/// <summary>
