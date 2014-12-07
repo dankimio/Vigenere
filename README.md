@@ -1,3 +1,3 @@
-coursework
+Vigenere cipher codebreaker
 ==========
-Decipherment
+Vigenere cipher codebreaker written in C#
