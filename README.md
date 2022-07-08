@@ -1,3 +1,3 @@
-Vigenere cipher codebreaker
-==========
-Vigenere cipher codebreaker written in C#
+# Vigenere cipher decoder
+
+Vigenere cipher decoder/solver written in C#.
